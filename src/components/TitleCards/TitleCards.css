@@ -1,0 +1,59 @@
+.title-cards{
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.title-cards h2{
+    margin-bottom: 8px;
+}
+.card-list{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+.card-image-container{
+    position: relative;
+    width: 240px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card-image-container img{
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+.overlay{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    pointer-events: none;
+    opacity: 0;
+}
+.card-image-container:hover .overlay{
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    pointer-events: auto;
+}
+.card-list .card{
+    text-decoration: none;
+    color: #fff;
+}
+.card-list .card p{
+    margin: 4px 0 0;
+    color: #fff;
+}
